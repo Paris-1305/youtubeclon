@@ -1,0 +1,253 @@
+.App {
+  text-align: center;
+}
+.navbar{
+  display:flex;
+  justify-content: space-around;
+  padding-bottom:40px;
+  margin-bottom: 20px;
+}
+.box{
+  max-width: 400px;
+  width: 100%;
+}
+.box .search-box{
+  position:relative;
+  height:50px;
+  max-width: 380px;
+  margin: auto;
+  /*box-shadow: 0 5px 10px rgba(0, 0, 0, 0.25);*/
+  border-radius: 25px;
+}
+.navbar .box .search-box .search{
+  width:100%;
+  outline: none;
+  height: 100%;
+  font-weight: 500;
+  font-size: 20px;
+  align-items: center;
+  border-radius: 25px;
+  border: 2px solid black;
+  margin-left:260px;
+  padding-left: 30px;
+  padding-right: 30px;
+  margin-left: 30px;
+  margin-top: 20px;
+}
+.search-icon{
+  position: absolute;
+  width: 100%;
+  font-size: 20px;
+  height: 80%;
+  left: 380px;
+  bottom:-10px;
+  line-height: 50px;
+  text-align: center;
+}
+.icon .yutube{
+  margin-left:-60px;
+}
+.navbar ::-webkit-input-placeholder {
+  text-align: center; /* For Safari/Chrome */
+}
+.container{
+  display: flex;
+}
+.top-section{
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  padding: 20px 15px;
+}
+.item-icon{
+  display: flex;
+  color:black;
+  padding: 10px 15px;
+  gap:15px;
+  transition:all 0.5s ;
+}
+.sidebar{
+  margin-bottom: 10px;
+  background-color: transparent;
+  left:18px;
+  display: flex;
+  flex-direction: column;
+  list-style: none;
+  position:absolute;
+  width:270px;
+  height: 80%;
+  background-color: #fff;
+  box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+  transform: scale(1.1); 
+}
+.sidebar.open{
+  transform:translateY(-200px);
+}
+.menu{
+  list-style:none;
+
+}
+.navbar .icon{
+  margin-top: 20px;
+  display: flex;
+  justify-content: space-between;
+  flex-direction:row;
+  list-style: none;
+ padding-right: -330px;
+}
+.navbar .thirdNav{
+  margin-top: 28px;
+ position: relative;
+  display:flex;
+}
+.my-icon{
+  width: 1px;
+  height: 2px;
+  border-radius: 10%;
+}
+.navbar .my-icon:hover{
+  background-color: gray;
+  border-radius: 3px;
+  
+}
+
+.youtube{
+  font-size: 30px;
+ margin-left: -40px;
+  left: 10px;
+}
+.item-icon{
+  cursor:pointer;
+  padding-bottom:22px;
+  font-weight: 300;
+  transition: background-color 0.2s ease-out;
+}
+.item-icon:hover{
+  cursor:pointer;
+  background-color: #f0f0f0;
+  opacity: 0.8; /* reduce opacity on hover */
+  /*box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);*/
+}
+.item-icon .item-text{
+  font-weight:600;
+  font-size:20px;
+  color:black;
+  cursor:pointer
+}
+.item-icon .item-text:hover{
+  color:aqua;
+  cursor:pointer
+}
+.photos{
+  cursor: pointer;
+  transition: 0.3s;
+ 
+}
+.photos:hover{
+  box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+  transform: scale(1.1);
+}
+/*.photos{
+   display:flex;
+   flex-direction: row;
+   flex-wrap:wrap;
+   justify-content: center;
+}*/
+.item-pict{
+   display:grid;
+   grid-template-columns: 25% 25% 25% 25%;
+}
+ 
+.photos{
+  margin-bottom: 30px;
+}
+.photos img{
+  width:80%;
+  height: auto;
+  object-fit: cover;
+  margin: 5px;
+}
+.section{
+  width:auto;
+  display: block;
+  position: absolute;
+  left: 20%;
+}
+.dashboard{
+  position: absolute;
+  left:20px;
+  margin-bottom: 40px;
+  display: inline-block;
+  font-size: 15px;
+}
+.dashboard .home, .subscription, .shorts{
+  padding-bottom: 60px;
+  cursor: pointer;
+}
+.icondash:hover{
+  background-color:#98EECC;
+}
+.keyboard{
+  position: absolute;
+  float:right;
+  right: -25%;
+  top:30px;
+  width: 80px;
+  height: 60px;
+}
+.keyboard:hover{
+  background-color: gray;
+  border-radius: 3px;
+}
+@media(max-width:800px){
+   .item-pict{
+    display: flex;
+    flex-direction: column;
+    float :right;
+    align-items: center;
+    margin :auto;
+    justify-content: center;
+   }
+  .search{
+    max-width:100% ;
+  }
+  .box .search-box .search-icon{
+   display: none;
+  }
+ .navbar .thirdNav .my-icon{
+    display:none;
+  }
+ .navbar .icon .youtube{
+    padding-left: -20px;
+  }
+  .photos img{
+    width:50%;
+    height:30%;
+  }
+  .photos:hover{
+    box-shadow: 0 2px 3px 0 rgba(0, 0, 0, 0.2);
+    transform: scale(1.1);
+  }
+}
+@media(max-width:1076px){
+  .item-pict{
+   display: flex;
+   flex-direction: column;
+   float :right;
+   align-items: center;
+   margin :auto;
+   justify-content: center;
+  }
+ .search{
+   max-width:100% ;
+ }
+ .box .search-box .search-icon{
+  display: none;
+ }
+.navbar .thirdNav .my-icon{
+   display:none;
+ }
+.navbar .icon .youtube{
+   padding-left: -20px;
+ }
+}
